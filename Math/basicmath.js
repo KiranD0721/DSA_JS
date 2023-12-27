@@ -170,13 +170,13 @@ is a number that is the sum of its own digits each raised to the power of the nu
 
 // gcdMethod2(48,18)
 
-const gcdMethod3 = (a , b) => {
-    while(b !== 0){
-        const remainder = a % b;
-        a = b;
-        b = remainder;
-    }
-    return Math.abs(a)
-}
+// const gcdMethod3 = (a , b) => {
+//     while(b !== 0){
+//         const remainder = a % b;
+//         a = b;
+//         b = remainder;
+//     }
+//     return Math.abs(a)
+// }
 
-console.log(gcdMethod3(48,18));
+// console.log(gcdMethod3(48,18));
