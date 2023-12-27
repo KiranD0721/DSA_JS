@@ -180,3 +180,5 @@ is a number that is the sum of its own digits each raised to the power of the nu
 // }
 
 // console.log(gcdMethod3(48,18));
+
+/* ------------------------------END------------------------------------------------- */
