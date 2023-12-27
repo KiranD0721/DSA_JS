@@ -133,7 +133,7 @@ with initial conditions
 F(0)=0 and F(1)=1.
 Here are the first few Fibonacci numbers in the sequence:
 
-0,1,1,2,3,5,8,13,21,34,… ----------------------------------------------------------------------- */
+0,1,1,2,3,5,8,13,21,34,… -------------------------------remember the time complexity willl be O(2 **n)---------------------------------------- */
 
 // const fibonacciSequence = (n) => {
 //     if(n === 0){
