@@ -565,3 +565,80 @@
 
 /* ---------------------------------------------------------------------------------------- */
 
+
+// function getLongestSubarray(a, k) {
+//     let n = a.length; // size of the array
+
+//     let len = 0;
+//     for (let i = 0; i < n; i++) { // starting index
+//         for (let j = i; j < n; j++) { // ending index
+//             // add all the elements of subarray = a[i...j]
+//             let s = 0;
+//             for (let K = i; K <= j; K++) {
+//                 s += a[K];
+//             }
+
+//             if (s === k)
+//                 len = Math.max(len, j - i + 1);
+//         }
+//     }
+//     return len;
+// }
+
+// let a = [2, 3, 5, 1, 9];
+// let k = 10;
+// let len = getLongestSubarray(a, k);
+// console.log("The length of the longest subarray is:", len);
+/* ------------------------------------------------------------------ */
+
+//BRUTE
+// const longestSubArray = (arr, n) => {
+//     let len = 0;
+//     let start = 0;
+//     let end = 0;
+
+//     for (let i = 0; i < arr.length; i++) {
+//         let sum = 0;
+
+//         for (let j = i; j < arr.length; j++) {
+//             sum += arr[j];
+
+//             if (sum === n && j - i + 1 > len) {
+//                 len = j - i + 1;
+//                 start = i;
+//                 end = j;
+//             }
+//         }
+//     }
+
+//     return arr.slice(start, end + 1);
+// };
+
+// let a = [2, 3, 5, 1, 9];
+// let k = 10;
+// let result = longestSubArray(a, k);
+// console.log(result);
+
+//----------If you see the Time Complexity which is O(N*N*N)------let optimize the brute approach;
+
+// const longestSubArray = (arr , k) => {
+//     len = 0;
+//     for(let i = 0; i  <arr.length; i++){
+//         sum = 0;
+//         for(let j = i; j < arr.length; j++){
+//             sum += arr[j];
+
+//             if(sum === k){
+//                 len  = Math.max(len , j-i+1);
+//             };;
+//         };
+//     };
+//     return len;
+// };
+
+// arr = [2,3,5,1,9]
+// k = 10;
+// console.log(longestSubArray(arr , k));
+
+// Now the Time Complexity of the brute force approach will be O(N*N) somehow brute has been optimized still it is in the worst case
+
