@@ -642,3 +642,87 @@
 
 // Now the Time Complexity of the brute force approach will be O(N*N) somehow brute has been optimized still it is in the worst case
 
+//OPTIMAL
+
+// const longestSubArray = (arr , k) => {
+//     n = arr.length;
+//     left = 0;
+//     right = 0;
+//     max_len = 0;
+//     sum = arr[0]
+    
+//     while(right < n){
+//         while(left <=right && sum > k){
+//             sum -= arr[left]
+//             left++
+//         }
+
+//         if(sum === k){
+//             max_len = Math.max(max_len , right - left + 1)
+//         }
+
+//         right++
+//         if(right < n){
+//             sum += arr[right]
+//         }
+//     }
+//     return max_len;
+// }
+
+// arr = [2,3,5,1,9]
+// k = 10
+
+// console.log(longestSubArray(arr , k));
+
+/* ----------------------------------------------------------------- */
+
+//BRUTE
+
+// const getLongestSubarray = (a, k) => {
+//     let n = a.length; // size of the array
+//     let len = 0;
+//     for (let i = 0; i < n; i++) { // starting index
+//         for (let j = i; j < n; j++) { // ending index
+//             // add all the elements of subarray = a[i...j]
+//             let s = 0;
+//             for (let K = i; K <= j; K++) {
+//                 s += a[K];
+//             }
+
+//             if (s === k)
+//                 len = Math.max(len, j - i + 1);
+//         }
+//     }
+//     return len;
+// }
+
+// let a = [-1, 1, 1];
+// let k = 1;
+// let len = getLongestSubarray(a, k);
+// console.log("The length of the longest subarray is:", len);
+
+//BETTER----------
+
+// const longestSubArray = (arr , k) => {
+//     len = 0;
+//     for(let i = 0; i < arr.length;i++){
+//         sum = 0;
+//         for(let j = i; j < arr.length; j++){
+//             sum += arr[j]
+
+//             if(sum === k){
+//                 len = Math.max(len , j - i + 1);
+//             }
+//         }
+
+        
+//     }
+//     return len;
+// };
+
+// let a = [-1, 1, 1];
+// let k = 1;
+// console.log(longestSubArray(a , k));
+
+
+
