@@ -289,3 +289,69 @@
 // console.log(kadanesAlgo(arr));
 
 /* --------------------------------------------------- */
+
+// const bestBuyAndSell = (arr) => {
+//     const n = arr.length;
+//     min = arr[0]; profit = 0;
+//     for(let i = 1; i < n; i++){
+//         cost = arr[i]  - min;
+//         profit = Math.max(profit , cost);
+//         min = Math.min(min , arr[i]);
+//     }
+//     return profit;
+// }
+
+// arr = [7,1,5,3,6,4]
+// console.log(bestBuyAndSell(arr));
+
+/* --------------------------------------------------- */
+
+// var rearrangeArray = function(arr) {
+//     const n = arr.length;
+//     pos = [];
+//     neg = [];
+
+//     for(let i =0; i< n;i++){
+//         if(arr[i] >=0){
+//             pos.push(arr[i])
+//         }else{
+//             neg.push(arr[i])
+//         }
+//     }
+
+//     for(let i = 0; i < Math.floor(n/2);i++){
+//         arr[2*i] = pos[i];
+//         arr[2* i+1] = neg[i]
+//     }
+//     return arr;
+// };
+
+// arr = [3,1,-2,-5,2,-4]
+// console.log(rearrangeArray(arr));
+
+/* -----------if you see the time and space complexity it is O(N*N) and O(N)---------- */
+
+//--------lets optimize------let try to reduce time complex to O(N)--------
+
+// const rearrangeArray = (arr) => {
+//     const n = arr.length;
+
+//     posIndex = 0;negIndex = 1;
+//     let result = new Array(n).fill(0);
+
+//     for(let i = 0; i < n; i++){
+//         if(arr[i] < 0){
+//             result[negIndex] = arr[i];
+//             negIndex += 2;
+//         }else{
+//             result[posIndex] = arr[i];
+//             posIndex +=2;
+//         }
+//     }
+//     return result;
+// }
+
+// arr = [3,1,-2,-5,2,-4]
+// console.log(rearrangeArray(arr));
+
+/* ------------------------------------------------------------------------------ */
