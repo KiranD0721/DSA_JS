@@ -92,43 +92,43 @@ Circular Doubly LL
 
 //Lets Insert the data at the end---------------------------
 
-class Node{
-    constructor(data){
-        this.data = data;
-        this.next = null;
-    }
-}
-class LinkedList{
-    constructor(){
-        this.head = null;
-        this.tail = null;
-    }
+// class Node{
+//     constructor(data){
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
+// class LinkedList{
+//     constructor(){
+//         this.head = null;
+//         this.tail = null;
+//     }
 
-    insertLast(data){
-        const newNode = new Node(data);
+//     insertLast(data){
+//         const newNode = new Node(data);
 
-        if(!this.head){
-            this.head = newNode;
-            this.tail = newNode;
-        }else{
-            this.tail.next = newNode;
-            this.tail  = newNode;
-        }
-    }
+//         if(!this.head){
+//             this.head = newNode;
+//             this.tail = newNode;
+//         }else{
+//             this.tail.next = newNode;
+//             this.tail  = newNode;
+//         }
+//     }
 
-    //Display list
-    display(){
-        let current = this.head;
-        while(current){
-            console.log(current.data)
-            current = current.next;
+//     //Display list
+//     display(){
+//         let current = this.head;
+//         while(current){
+//             console.log(current.data)
+//             current = current.next;
 
-        }
-    }
-}
+//         }
+//     }
+// }
 
-const singleLinkedList = new LinkedList();
-singleLinkedList.insertLast(1);
-singleLinkedList.insertLast(2);
-singleLinkedList.insertLast(3);
-singleLinkedList.display();
+// const singleLinkedList = new LinkedList();
+// singleLinkedList.insertLast(1);
+// singleLinkedList.insertLast(2);
+// singleLinkedList.insertLast(3);
+// singleLinkedList.display();
