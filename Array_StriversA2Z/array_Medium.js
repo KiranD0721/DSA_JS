@@ -355,3 +355,93 @@
 // console.log(rearrangeArray(arr));
 
 /* ------------------------------------------------------------------------------ */
+
+// 2 1 5 4 3 0 0
+
+// const nextPermutation = (arr) => {
+//     const n = arr.length;
+
+//     function reverse(arr , start , end){
+//         while(start < end){
+//             [arr[start] , arr[end]] = [arr[end] , arr[start]]
+//             start++;
+//             end--
+//         }
+//     }
+//     let index = -1;
+//     for(let i = n-2; i >=0; i--){
+//         if(arr[i] < arr[i+1]){
+//             index = i;
+//             break;
+//         }
+//     }
+
+//     for(let i = n-1; i >index;i--){
+//         if(arr[i] > arr[index]){
+//             [arr[i] , arr[index]] = [arr[index] , arr[i]];
+//             break;
+//         }
+//     }
+//     reverse(arr , index+1 , n-1)
+//     return arr;
+// }
+
+// arr = [2,1,5,4,3,0,0]
+// console.log(nextPermutation(arr));
+
+/* ---------------------------------------------------------------- */
+
+// 10 22 12 3 0 6
+
+// const leaderArray = (arr) => {
+//     const n = arr.length;
+//     result = [];
+
+//     for(let i = 0; i < n; i++){
+//         leader = true;
+//         for(let j = i+1; j < n; j++){
+//             if(arr[j] > arr[i]){
+//                 leader = false;
+//                 break;
+//             }
+//         }
+//         if(leader === true){
+//             result.push(arr[i]);
+//         }
+//     }
+//     return result;
+// }
+
+// arr = [10,22,12,3,0,6]
+// console.log(leaderArray(arr));
+
+// lets optimize it ----------------------------------------------------------
+
+// 10 22 12 3 0 6
+
+// const leaderArray = (arr) => {
+//     result = []
+//     max= 0;
+//     for(let i = arr.length-1;i >=0;i--){
+//         if(arr[i] > max){
+//             result.push(arr[i]);
+//             max = arr[i]
+//         };
+//     };
+
+//     function reverse(arr , start , end){
+//         while(start < end){
+//             [arr[start] , arr[end]] = [arr[end] , arr[start]]
+//             start++;
+//             end--;
+//         }
+//         return arr;
+//     };
+//     result = reverse(result , 0 , result.length-1);
+//     return result;
+// };
+
+// arr = [10,22,12,3,0,6]
+// console.log(leaderArray(arr));
+
+/* -------------------------------------------------------------------------------------- */
